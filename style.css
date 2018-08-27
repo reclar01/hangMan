@@ -1,3 +1,26 @@
 body{
     background-color: cornflowerblue;
 }
+#mainTable{
+
+    border: 3px solid black;
+    width: 100%;
+}
+.trow{
+    border: 5px solid red;
+    width: 60%;
+
+}
+#thcell{
+    border: 2px solid orange;
+    height: 20px;
+}
+
+.tcell{
+    border: 2px solid rgb(211, 30, 30);
+    height: 200px;
+}
+#td0_6{
+    row-s
+
+}
