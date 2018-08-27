@@ -1,9 +1,38 @@
 body{
     background-color: cornflowerblue;
 }
-#mainTable{
+maindiv{
+    padding: 20px;
+    background-color: lightblue;
+}
+.alphacell{
+    background-color: orange;
+    padding: 0px;
+    border: 1px solid brown;
+    height: 60px;
+    width: 0px;
+}
+#alphaCell{
+    border: 1px solid seagreen;
+    padding: 0px;
+    width: 50%;
+}
+#gallowCell{
+    border: 5px solid salmon;
+}
+#alphabetTable{
+
+    border: 3px solid white;
+    width: 100%;
+}
+#gallowTable{
 
     border: 3px solid black;
+    width: 100%;
+    
+}
+#mainTable{
+    border: 1px solid yellow;
     width: 100%;
 }
 .trow{
@@ -18,7 +47,7 @@ body{
 
 .tcell{
     border: 2px solid rgb(211, 30, 30);
-    height: 200px;
+    height: 100px;
 }
 #td0_6{
     row-s

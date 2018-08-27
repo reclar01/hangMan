@@ -1,41 +1,53 @@
-console.log("this is the main.js file");
-let mainDiv = document.getElementById("main");
-let header = document.createElement("H1");
-
-//create table
+//create a main table
 let mainTable = document.createElement("table");
 mainTable.id = "mainTable";
 
-//create a table row
-let tblRow = document.createElement("tr");
-tblRow.id = "trow";
+//create a table to hold the alphabet
+let alphabetTable = document.createElement("table");
+alphabetTable.id = "alphabetTable";
 
-//create table header cell
-let tblHeaderRow = document.createElement("th");
-tblHeaderRow.id = "thcell";
+//create a table to hold the gallows
+let gallowTable = document.createElement("table");
+gallowTable.id = "gallowTable";
 
-//create table cells
-let tblcell = document.createElement("td");
-tblcell.id = "tdcell";
+//create a td for alpha and gallow
+let alphaCell = document.createElement("td");
+alphaCell.id = "alphaCell";
+let gallowCell = document.createElement("td");
+gallowCell.id = "gallowCell";
+
+//create three rows in the main table to hold each table
+let topRow = document.createElement("tr");
+topRow.id ="topRow";
+let midRow = document.createElement("tr");
+midRow.id = "midRow";
+let bottomRow = document.createElement("tr");
+bottomRow.id = "bottomRow";
+
+//add the mainTable to the div
+document.body.insertBefore(mainTable,maindiv);
 
 
-header.innerHTML = "this is the header";
-document.body.insertBefore(header,mainDiv);
+//Add each row to the main table
+mainTable.appendChild(topRow);
+mainTable.appendChild(midRow);
+// add two td cells to the midRow and add the alphabetTable and gallowTable to them
+midRow.appendChild(alphaCell);
+midRow.appendChild(gallowCell);
+alphaCell.appendChild(alphabetTable);
+//CREATE 6 ROWS OF 5 COLUMNS IN THE alphabetTable
+for(let i=0; i<6;i++){
+    let row = document.createElement("tr");
+    row.id = "row_"+i;
+    
+    for(let j=0;j<5;j++){
+        let cell = document.createElement("td");
+        cell.id="cell"+i+"_"+j;
+        cell.className="alphacell";
+        row.appendChild(cell);
 
-document.body.insertBefore(mainTable,header.nextSibling);
-
-for(let i =0; i<8;i++){
-    let tblRow = document.createElement("tr");
-    tblRow.className = "trow";
-    tblRow.id = "row"+i;
-    for(let j=0; j<7;j++){
-        let tblcell = document.createElement("td");
-        tblcell.id = "td"+i+"_"+j;
-        tblcell.className="tcell"; 
-        tblRow.appendChild(tblcell) ;
-        
     }
-    mainTable.appendChild(tblRow);
+    alphabetTable.appendChild(row);
 }
-
-//tblRow.appendChild(tblHeaderRow);
+gallowCell.appendChild(gallowTable);
+mainTable.appendChild(bottomRow);
