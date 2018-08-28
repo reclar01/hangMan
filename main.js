@@ -26,7 +26,8 @@ let midRow = document.createElement("tr");
 midRow.id = "midRow";
 let bottomRow = document.createElement("tr");
 bottomRow.id = "bottomRow";
-
+let x = document.getElementById("bottomRow");
+console.log('x is ' +x);
 //add the mainTable to the div
 document.body.insertBefore(mainTable,maindiv);
 
@@ -48,14 +49,18 @@ for(let i=0; i<6;i++){
         cell.className="alphacell";
         let cid = "cell"+i+"_"+j;
         cell.id=cid;
-        console.log('cell id is ' +cell.id);
-        
-        
+        //console.log('cell id is ' +cell.id);
         cell.innerHTML = alphabet[i][j];
-        //cidvar.addEventListener('click',letterSelected(cid));
         row.appendChild(cell);
         let cidvar = document.getElementById(cell.id);
-        console.log('cidvar is ' + cidvar);
+        cell.addEventListener('click',function(e){
+            if(e.target && e.target.id== cid){
+                //do something}
+                //alert('the cell ' +cell.innerHTML+ ' was selected');
+                processSelection(cell.id, cell.innerHTML);
+            }
+         });
+       // console.log('cidvar is ' + cidvar);
         //cell[j].onclick = function(){letterSelect();};
 
     }
@@ -64,11 +69,11 @@ for(let i=0; i<6;i++){
 gallowCell.appendChild(gallowTable);
 mainTable.appendChild(bottomRow);
 
-function letterSelected(cid){
-    let val = cid.innerHTML;
-    alert(val + " was selected!!!");
-}
+function processSelection(id, letter){
+    console.log('id is ' + id);
+    console.log('letter selected is '+ letter);
+    let cell = document.getElementById(id);
+    cell.style.backgroundColor= "blanchedalmond";
 
-function getLetter(obj){
 
 }
