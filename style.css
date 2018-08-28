@@ -9,16 +9,26 @@ maindiv{
     background-color: orange;
     padding: 0px;
     border: 1px solid brown;
+   /* */
     height: 60px;
-    width: 0px;
+    width: 60px;
+    transition: 0s;
+    transition-property: background-color;
+
+}
+.alphacell:hover{
+    background-color: blanchedalmond;
 }
 #alphaCell{
     border: 1px solid seagreen;
     padding: 0px;
     width: 50%;
+    border-right-width: 200px;
+    border-left-width: 200px;
 }
 #gallowCell{
     border: 5px solid salmon;
+    background-color: bisque;
 }
 #alphabetTable{
 
@@ -29,6 +39,7 @@ maindiv{
 
     border: 3px solid black;
     width: 100%;
+    height: 300px;
     
 }
 #mainTable{
