@@ -5,6 +5,9 @@ maindiv{
     padding: 20px;
     background-color: lightblue;
 }
+#topRow{
+    border: 3px solid salmon;
+}
 .alphacell{
     background-color: orange;
     padding: 0px;
@@ -20,14 +23,22 @@ maindiv{
 
 }
 .alphacell:hover{
-    background-color: blanchedalmond;
+    background-color: lightgrey;
+    
+}
+#HeadTitle{
+    font-size: 30px;
+    text-align: center;
+    colspan: 2;
+    border: 5px solid navajowhite;
+    
 }
 #alphaCell{
     border: 1px solid seagreen;
     padding: 0px;
     width: 50%;
-    border-right-width: 200px;
-    border-left-width: 200px;
+    border-right-width: 100px;
+    border-left-width: 100px;
 }
 #gallowCell{
     border: 5px solid salmon;

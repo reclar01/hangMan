@@ -22,12 +22,18 @@ gallowCell.id = "gallowCell";
 //create three rows in the main table to hold each table
 let topRow = document.createElement("tr");
 topRow.id ="topRow";
+let topTitle = document.createElement("td");
+topTitle.id="HeadTitle";
+topRow.appendChild(topTitle);
+topTitle.innerHTML = "Hangman!";
+topTitle.style.columnSpan = 2;
+
 let midRow = document.createElement("tr");
 midRow.id = "midRow";
 let bottomRow = document.createElement("tr");
 bottomRow.id = "bottomRow";
-let x = document.getElementById("bottomRow");
-console.log('x is ' +x);
+
+
 //add the mainTable to the div
 document.body.insertBefore(mainTable,maindiv);
 
@@ -68,12 +74,12 @@ for(let i=0; i<6;i++){
 }
 gallowCell.appendChild(gallowTable);
 mainTable.appendChild(bottomRow);
-
+/*Function to process the selection */
 function processSelection(id, letter){
     console.log('id is ' + id);
     console.log('letter selected is '+ letter);
+    let letterSelect = letter.fontcolor("lightgrey");
     let cell = document.getElementById(id);
     cell.style.backgroundColor= "blanchedalmond";
-
-
+    cell.innerHTML = letterSelect;
 }
