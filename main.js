@@ -1,3 +1,6 @@
+//ARRAY OF objectS indexing the alphabet
+let alphabet = [['A','B','C','D','E'],['F','G','H','I','J'],['K','L','M','N','O'],['P','Q','R','S','T'],['U','V','W','X','Y'],['Z','','','','']];
+
 //create a main table
 let mainTable = document.createElement("table");
 mainTable.id = "mainTable";
@@ -42,12 +45,30 @@ for(let i=0; i<6;i++){
     
     for(let j=0;j<5;j++){
         let cell = document.createElement("td");
-        cell.id="cell"+i+"_"+j;
         cell.className="alphacell";
+        let cid = "cell"+i+"_"+j;
+        cell.id=cid;
+        console.log('cell id is ' +cell.id);
+        
+        
+        cell.innerHTML = alphabet[i][j];
+        //cidvar.addEventListener('click',letterSelected(cid));
         row.appendChild(cell);
+        let cidvar = document.getElementById(cell.id);
+        console.log('cidvar is ' + cidvar);
+        //cell[j].onclick = function(){letterSelect();};
 
     }
     alphabetTable.appendChild(row);
 }
 gallowCell.appendChild(gallowTable);
 mainTable.appendChild(bottomRow);
+
+function letterSelected(cid){
+    let val = cid.innerHTML;
+    alert(val + " was selected!!!");
+}
+
+function getLetter(obj){
+
+}
